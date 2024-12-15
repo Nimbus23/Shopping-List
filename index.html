@@ -37,7 +37,19 @@
 
         function addItem(){
             let val = input.value;
-            input.value = "";           
+            input.value = "";
+            
+            const li = document.createElement("li");
+            const span = document.createElement("span");
+            const deleteBtn = document.createElement("button");
+
+            li.appendChild(span);
+            li.appendChild(deleteBtn);
+
+            span.textContent = val;
+            deleteBtn.textContent = "Delete";
+
+            ul.appendChild(li);          
         }
                     
         btn.onclick = addItem;
